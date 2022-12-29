@@ -1,20 +1,16 @@
-version: "3.7"
-
 services:
   mosquitto:
     image: eclipse-mosquitto:latest
     environment:
       - TZ=Europe/Brussels
-    container_name: mosquitto
+    container_name: mosquitto-qbus
     restart: unless-stopped
     ports:
-      - "1883:1883"
-#      - "9001:9001"
+      - "11883:1883"
     volumes:
       - ./config:/mosquitto/config
       - ./data:/mosquitto/data
       - ./log:/mosquitto/log
-        #- ./pwfile:/mosquitto/pwfile
     networks:
       - iot
 networks:
