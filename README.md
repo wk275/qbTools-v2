@@ -13,7 +13,7 @@ https://github.com/QbusKoen/QbusMqtt-installer
 https://docs.docker.com/engine/install/
 ```
 ### Create docker container node-red-qbus
-`ssh <your user>@<your address>`
+`ssh <your user>@<your server address>`
 
 ```
 mkdir -p ~/docker/node-red-qbus
@@ -23,4 +23,4 @@ docker compose up -d
 docker ps -a
 ```
 ### login node-red
-`http://<your address>:1880`
+`http://<your server address>:1880`
