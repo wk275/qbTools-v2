@@ -27,8 +27,6 @@ https://docs.docker.com/engine/install/
 ```
 cd
 git clone https://github.com/wk275/qbTools/
-docker compose up -d
-docker ps -a
 ```
 ### login node-red
 `http://<your server address>:1880`
