@@ -28,6 +28,18 @@ https://docs.docker.com/engine/install/
 cd
 git clone https://github.com/wk275/qbTools/
 ```
+
+### Start all docker qbus containers
+```
+cd ~/qbTools
+./docker_up_all.sh
+```
+### Stop all docker qbus containers
+```
+cd ~/qbTools
+./docker_rm_all.sh
+```
+
 ### login node-red
 `http://<your server address>:11880`
 
