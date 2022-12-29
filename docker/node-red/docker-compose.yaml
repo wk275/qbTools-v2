@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  node-red:
+    image: nodered/node-red:latest
+    environment:
+      - TZ=Europe/Brussels
+    container_name: node-red
+    restart: unless-stopped
+    user: "1000"
+    #privileged: true
+    ports:
+      - "1880:1880"
+    volumes:
+      - "./volumes/data:/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket"
+    networks:
+      - iot
+    logging:
+      options:
+        max-size: 5m
+        max-file: "3"
+networks:
+  iot:
+    name: IOT_Net
+    driver: bridge
