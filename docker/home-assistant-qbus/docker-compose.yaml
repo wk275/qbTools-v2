@@ -1,7 +1,7 @@
 services:
   homeassistant:
     image: ghcr.io/home-assistant/home-assistant:latest
-    container_name: homeassistant-qbus
+    container_name: home-assistant-qbus
     restart: unless-stopped
     environment:
       - TZ=Europe/Brussels
