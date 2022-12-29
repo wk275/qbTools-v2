@@ -1,23 +1,19 @@
 version: "3.8"
-
 services:
   homeassistant:
     image: ghcr.io/home-assistant/home-assistant:latest
-    container_name: homeassistant
+    container_name: homeassistant-qbus
     restart: unless-stopped
     environment:
       - TZ=Europe/Brussels
     privileged: true
     volumes:
-      - "./config:/config"
+      - "./data/config:/config"
     networks:
       - iot
     ports:
-      - "8123:8123"
+      - "18123:8123"
 networks:
   iot:
     name: IOT_Net
     driver: bridge
-
-
-#network_mode: "host"
