@@ -17,7 +17,7 @@ https://docs.docker.com/engine/install/
 ```
 mkdir -p ~/docker/node-red-qbus
 cd ~/docker/node-red-qbus
-git clone https://github.com/wk275/qbus---nodered---homeassistant/blob/dc7bafbd84904e321476c511f07161a9f96ebf09/node-red
+git clone https://github.com/wk275/qbus---nodered---homeassistant/node-red
 docker compose up -d
 docker ps -a
 ```
