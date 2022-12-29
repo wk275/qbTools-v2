@@ -32,11 +32,13 @@ git clone https://github.com/wk275/qbTools/
 ### Start all docker qbus containers
 ```
 cd ~/qbTools
+chmod +x docker_up_all.sh
 ./docker_up_all.sh
 ```
 ### Stop all docker qbus containers
 ```
 cd ~/qbTools
+chmod +x docker_rm_all.sh
 ./docker_rm_all.sh
 ```
 
