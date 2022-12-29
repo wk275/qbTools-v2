@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    environment:
+      - TZ=Europe/Brussels
+    container_name: mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+#      - "9001:9001"
+    volumes:
+      - ./config:/mosquitto/config
+      - ./data:/mosquitto/data
+      - ./log:/mosquitto/log
+        #- ./pwfile:/mosquitto/pwfile
+    networks:
+      - iot
+networks:
+  iot:
+    name: IOT_Net
+    driver: bridge

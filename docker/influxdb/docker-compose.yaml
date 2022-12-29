@@ -1,0 +1,23 @@
+services:
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    restart: unless-stopped
+    networks: 
+      - iot
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./volumes/data:/var/lib/influxdb2
+      - ./volumes/etc:/etc/influxdb2
+    environment:
+      - INFLUXDB_ADMIN="admin"
+      - INFLUXDB_ADMIN_PASSWORD="admin275"
+      - INFLUXDB_USER="influx"
+      - INFLUXDB_USER_PASSWORD="influx275"
+      - TZ=Europe/Brussels
+networks:
+  iot:
+    name: IOT_Net
+    driver: bridge
+
