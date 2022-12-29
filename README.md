@@ -9,6 +9,10 @@ It creates docker compose files for
 - influxDB (database for Qbus statistics)
 - grafana (Qbus graphics)
 
+![image](https://user-images.githubusercontent.com/55239601/209997422-b7324499-a2ac-40ad-8f38-aaffabf26f60.png)
+
+
+
 Creates homeassistant entities for qbus via node-red subflows
 
 ## Prerequisites
