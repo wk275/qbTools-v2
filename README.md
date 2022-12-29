@@ -12,7 +12,7 @@ https://github.com/QbusKoen/QbusMqtt-installer
 ```
 https://docs.docker.com/engine/install/
 ```
-### Create node-red docker container
+### Create docker container node-red-qbus
 `ssh <your user>@<your address>`
 
 ```
