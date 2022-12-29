@@ -8,7 +8,6 @@ services:
     container_name: node-red
     restart: unless-stopped
     user: "1000"
-    #privileged: true
     ports:
       - "1880:1880"
     volumes:
