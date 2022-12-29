@@ -29,5 +29,5 @@ cd
 git clone https://github.com/wk275/qbTools/
 ```
 ### login node-red
-`http://<your server address>:1880`
+`http://<your server address>:11880`
 
