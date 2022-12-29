@@ -1,5 +1,5 @@
 #!/bin/bash
-for item in `ls ~/qbTools/docker|grep "qbus"`
+for item in `ls ~/qbTools/docker`
 do
         echo "-------------------------------------"
         cd ~/qbTools/docker/$item
