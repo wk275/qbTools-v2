@@ -1,4 +1,4 @@
-# qbTools    !!!! DO NOT USE is under construction  !!!!
+# qbTools
 
 This repository installs tools for the QBUS environment
 
