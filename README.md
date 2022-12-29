@@ -6,9 +6,7 @@ Creates homeassistant entities for qbus via node-red subflows
 ``` 
 https://github.com/QbusKoen/QbusMqtt-installer
 ```
-
 - install docker & docker compose
-
 ```
 https://docs.docker.com/engine/install/
 ```
