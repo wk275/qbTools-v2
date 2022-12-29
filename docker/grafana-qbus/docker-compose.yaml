@@ -1,0 +1,24 @@
+services:
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-qbus
+    restart: unless-stopped
+    user: "1000"
+    networks:
+      - iot
+    ports:
+      - "13000:3000"
+    volumes:
+      - ./data:/var/lib/grafana
+    environment:
+      - TZ=Europe/Brussels
+      - GF_SECURITY_ALLOW_EMBEDDING=true
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_NAME=Viewer
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
+      #- GF_AUTH_DISABLE_LOGIN_FORM=true
+      - GF_AUTH_OAUTH_AUTO_LOGIN=true
+networks:
+  iot:
+    name: IOT_Net
+    driver: bridge
