@@ -1,3 +1,5 @@
+## DO NOT USE is under construction 
+
 # qbus---nodered---homeassistant
 Creates homeassistant entities for qbus via node-red subflows
 
