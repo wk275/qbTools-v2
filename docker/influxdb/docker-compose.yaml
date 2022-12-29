@@ -12,9 +12,9 @@ services:
       - ./volumes/etc:/etc/influxdb2
     environment:
       - INFLUXDB_ADMIN="admin"
-      - INFLUXDB_ADMIN_PASSWORD="admin275"
+      - INFLUXDB_ADMIN_PASSWORD="admin"
       - INFLUXDB_USER="influx"
-      - INFLUXDB_USER_PASSWORD="influx275"
+      - INFLUXDB_USER_PASSWORD="influx"
       - TZ=Europe/Brussels
 networks:
   iot:
