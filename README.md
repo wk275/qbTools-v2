@@ -2,14 +2,14 @@
 
 This repository installs tools for the QBUS environment
 
-It creates docker compose files for
-- node-red (handles Qbus logic)
-- home-assistant (Qbus dashboard)
-- mosquitto (mqtt message broker)
-- influxDB (database for Qbus statistics)
-- grafana (Qbus graphics)
+It creates docker containers for
+- node-red (handles logic)
+- home-assistant (dashboard)
+- mosquitto (message broker)
+- influxDB (database for statistics)
+- grafana (graphics)
 
-![image](https://user-images.githubusercontent.com/55239601/209997934-16a886f8-1322-49be-b6f4-aeef01cf90e6.png)
+![image](https://user-images.githubusercontent.com/55239601/209998587-25c881c1-5b57-41b7-9663-6eb05b8960b1.png)
 
 
 ## Prerequisites
@@ -21,13 +21,12 @@ https://github.com/QbusKoen/QbusMqtt-installer
 ```
 https://docs.docker.com/engine/install/
 ```
-### Create docker container node-red-qbus
+### Create docker containers
 `ssh <your user>@<your server address>`
 
 ```
-mkdir -p ~/docker/node-red-qbus
-cd ~/docker/node-red-qbus
-git clone https://github.com/wk275/qbus---nodered---homeassistant/node-red
+cd
+git clone https://github.com/wk275/qbTools/
 docker compose up -d
 docker ps -a
 ```
