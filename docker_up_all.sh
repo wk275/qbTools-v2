@@ -1,7 +1,7 @@
 #!/bin/bash
-for item in `ls ~/qbTools|grep "qbus"`
+for item in `ls ~/qbTools/docker|grep "qbus"`
 do
         echo "-------------------------------------"
-        cd ~/qbTools/$item
+        cd ~/qbTools/docker/$item
         docker compose up -d
 done
