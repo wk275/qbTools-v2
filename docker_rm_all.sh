@@ -3,6 +3,6 @@
 for item in `docker ps -a |awk 'NF>1{print $NF}'|grep qbus`
 do
         echo "-------------------------------------"
-        cd ~/docker/$item
+        cd ~/qbTools/docker/$item
         docker compose rm --stop --force
 done
