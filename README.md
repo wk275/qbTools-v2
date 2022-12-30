@@ -6,7 +6,7 @@ To check is yout os is 64 bit
 dpkg-architecture| grep HOST_ARCH_BITS
 ```
 
-# qbTools  !!! under construction DO NOT USE !!!
+# qbTools64  !!! under construction DO NOT USE !!!
 
 This repository installs tools for the QBUS environment
 It creates docker containers for
