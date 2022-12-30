@@ -43,6 +43,10 @@ chmod +x docker_rm_all.sh
 ./docker_rm_all.sh
 ```
 
+### docker container ports
+To co-exist  with already installed software, I added 10.000 to the standard port numbers.
+E.g to login to node-red-qbus use port 11880 in stead of 1880
+
 ### login node-red
 `http://<your server address>:11880`
 
