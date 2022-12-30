@@ -30,13 +30,13 @@ cd
 git clone https://github.com/wk275/qbTools/
 ```
 
-### Start all docker qbus containers
+### Start all docker containers
 ```
 cd ~/qbTools
 chmod +x docker_up_all.sh
 ./docker_up_all.sh
 ```
-### Stop all docker qbus containers
+### Stop all docker containers
 ```
 cd ~/qbTools
 chmod +x docker_rm_all.sh
@@ -44,9 +44,24 @@ chmod +x docker_rm_all.sh
 ```
 
 ### docker container ports
-To co-exist  with already installed software, I added 10.000 to the standard port numbers.
-E.g to login to node-red-qbus use port 11880 in stead of 1880
+To co-exist with already installed software, I added 10.000 to the standard port numbers.
+E.g  the login for mosquitto-qbus uses port 11883 in stead of 1883
 
-### login node-red
-`http://<your server address>:11880`
+### software connections
+To configure all softwares out of the box a generic ip address is needed.
+In case you do not run a dns service, you have to edit the /etc/hosts file
+and add a line with
+
+'your servers ip address' local.lan
+
+### mosquitto
+#### login
+start a windows 'mqtt explorer' session with following parameters
+```
+- Host: your servers ip addres
+- Port: 11883
+- Username: qb-mos
+- password: qbmos@10
+```
+
 
