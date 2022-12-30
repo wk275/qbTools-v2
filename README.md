@@ -12,11 +12,12 @@ It creates docker containers for
 ![image](https://user-images.githubusercontent.com/55239601/209998587-25c881c1-5b57-41b7-9663-6eb05b8960b1.png)
 
 
-## Prerequisites
-- install qbusmqtt gateway
+## Requirements
+- install qbusmqtt gateway (I only install openhab and qbusmqtt) 
 ``` 
 https://github.com/QbusKoen/QbusMqtt-installer
 ```
+
 - install docker & docker compose
 ```
 https://docs.docker.com/engine/install/
