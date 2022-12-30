@@ -1,19 +1,12 @@
-# This repository is to be used on a 64 bit OS
-The influxDBV2 is compiled for a 64 bit architecture and will not work in a 32-bit OS
-
-To check is yout os is 64 bit
-```
-dpkg-architecture| grep HOST_ARCH_BITS
-```
-
-# qbTools64  !!! under construction DO NOT USE !!!
+# qbTools  !!! under construction DO NOT USE !!!
 
 This repository installs tools for the QBUS environment
 It creates docker containers for
 - node-red (handles logic)
 - home-assistant (dashboard)
 - mosquitto (message broker)
-- influxDB (database for statistics)
+- influxDBv2 (database for statistics to be used on 64bit OS systems)
+- influxDBv1 (database for statistics to be used on 32bit OS systems)
 - grafana (graphics)
 
 ![image](https://user-images.githubusercontent.com/55239601/209998587-25c881c1-5b57-41b7-9663-6eb05b8960b1.png)
