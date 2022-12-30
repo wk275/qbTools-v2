@@ -1,7 +1,14 @@
+# This repository is to be used on a 64 bit OS
+The influxDBV2 is compiled for a 64 bit architecture and will not work in a 32-bit OS
+
+To check is yout os is 64 bit
+```
+dpkg-architecture| grep HOST_ARCH_BITS
+```
+
 # qbTools  !!! under construction DO NOT USE !!!
 
 This repository installs tools for the QBUS environment
-
 It creates docker containers for
 - node-red (handles logic)
 - home-assistant (dashboard)
