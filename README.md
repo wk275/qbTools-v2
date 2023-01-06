@@ -40,7 +40,7 @@ All links between the software containers are configured.
 
 ### external links
 2 ways to hook up the qbTools environment to your environment. 
-#### 1. hookup qbusmqtt 
+#### 1. hookup qbusmqtt
 Edit & change qbusmqtt service file
 ```
 /lib/systemd/system/qbusmqtt.service
@@ -48,6 +48,23 @@ Edit & change qbusmqtt service file
 and modify ExecStart parameter
 ```
 mqttbroker "tcp://localhost:11883" -mqttuser qb-mos -mqttpassword qbmos@10
+```
+#### 1. hookup your existing MQTT broker
+Edit mosquitto-qb cnfig file to sync QBUS topics with your exiting MQTT broker
+```
+~/qbTools/mosquitto/config/mosquitto.conf
+```
+Add and modify MQTT bride parameters
+```
+#bridge connection
+log_type all
+connection bridge-01
+address <remote MQTT ip address and port e.g. 192.168.2.190:1883>
+try_private false
+cleansession true
+remote_username <MQTT remote user name>
+remote_password <MQTT remote password>
+topic cloudapp/# both 0
 ```
 
 ### Install docker containers
