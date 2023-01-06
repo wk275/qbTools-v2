@@ -1,13 +1,13 @@
 # qbTools  !!! under construction DO NOT USE !!!
 
-This repository installs tools for the QBUS environment
+This repository installs tools for managng a QBUS or MQTT environment.
 It creates docker containers for
 - mosquitto (message broker)
 - node-red (handles logic)
 - home-assistant (dashboard)
 - influxDBv1 (database for statistics to be used on sytems with a 32bit OS architecture)
 - influxDBv2 (database statistics to be used on sytems with a 64bit OS architecture)
-- grafana (graphics)
+- grafana (charts)
 
 ![image](https://user-images.githubusercontent.com/55239601/211032914-ccac6a35-d5d1-4e9c-a411-5cb5ed3247e9.png)
 
