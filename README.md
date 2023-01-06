@@ -7,6 +7,12 @@ It creates docker containers for
 - influxDBv1 (database for statistics to be used on sytems with a 32bit OS architecture)
 - influxDBv2 (database statistics to be used on sytems with a 64bit OS architecture)
 - grafana (charts)
+
+The environment is tested and should work on a the systems below. Although there is no guanrantee :-)
+- raspberry pi model 4B - 4GB memory - 64 bit OS
+- raspberry pi model 4B - 4GB memory - 32 bit OS
+- odroid C4 - 4GB memory - 64 bit OS
+
 #### How to check if your system is running in 32 or 64-bit mode
 
 ```
