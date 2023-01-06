@@ -1,5 +1,5 @@
 # qbTools
-This repository installs an integrated tooling environment for managing a QBUS or MQTT environment.
+This repository installs an integrated tooling environment for managing a QBUS or MQTT environment on linux.
 It creates docker containers for
 - mosquitto (message broker)
 - node-red (handles logic)
