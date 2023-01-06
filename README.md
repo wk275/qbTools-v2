@@ -32,7 +32,7 @@ https://docs.docker.com/engine/install/
 ## qbTools installation
 
 ### Install docker containers
-Preferred installation is in your users home directory. If not you'll need to change some commands below!
+Preferred installation is in your user home directory. If not you'll need to change some commands below!
 
 ssh 'your user'@'your ipaddress'
 ```
