@@ -15,20 +15,6 @@ It creates docker containers for
 - install qbusmqtt gateway
  ``` 
 https://github.com/QbusKoen/QbusMqtt-installer
-```
-The options I use are
-```
-2. existing mosquitto server
-mqtt address local.lan
-mqtt port 11883
-yes openhab install
-no nodered install
-no samba install
-mqtt user = qb-mos
-mqtt passwd = qbmos@10
-yes 64Bit install (if your OS has a 64bit architecture otherwise no
-yes delete openhab temp files
-```
 
 - install docker & docker compose
 ```
