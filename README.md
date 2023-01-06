@@ -122,7 +122,7 @@ url: http://"your ip address":11880
 ### homeassistant
 - url: http://"your ip address":18123
 - username: qb-homeassistant
-- password: homeassistant@10
+- password: qbhomeassistant@10
 
 
 ### influxdb
@@ -133,6 +133,6 @@ url: http://"your ip address":11880
 ### grafana
 - url: http://"your ip address":13000
 - username: qb-grafana
-- password: grafana@10
+- password: qbgrafana@10
 
 
