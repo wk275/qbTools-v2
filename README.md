@@ -56,7 +56,7 @@ cd ~/qbTools
 docker compose up -d
 docker ps -a
 ```
-All containers names are suffixed by "-qb" . 
+All container names are suffixed by "-qb" . 
 5 docker containers should run. Please check if their status is stable.
 
 ### Stop docker containers
