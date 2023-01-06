@@ -82,7 +82,7 @@ and modify ExecStart parameters
 mqttbroker "tcp://localhost:11883" -mqttuser qb-mos -mqttpassword qbmos@10
 ```
 #### 2. Hookup your existing MQTT broker
-Edit mosquitto-qb config file to sync QBUS topics with your exiting MQTT broker
+Edit mosquitto-qb config file to sync QBUS topics with your existing MQTT broker
 ```
 vi ~/qbTools/mosquitto/config/mosquitto.conf
 ```
