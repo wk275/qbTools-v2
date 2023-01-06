@@ -48,7 +48,7 @@ chmod +x setenv.sh
 ./setenv.sh
 ```
 
-### start docker containers
+### Start docker containers
 ```
 cd ~/qbTools
 docker compose up -d
@@ -63,18 +63,16 @@ cd ~/qbTools
 docker compose rm --stop --force
 docker ps -a
 ```
-5 docker container should run. Please check status.  
 
-
-### container links are already defined
-All links between the software containers are configured.
+### Container links are already defined
+All links between the software containers are already configured.
 - nodered-qb is connected to mosquitto-qb and to influxdb-qb
 - homeassistant-qb is connected to mosquitto-qb and to influxdb-qb
 - grafana-qb is connected to influxdb-qb
 
-### external links
+### Define external links
 2 ways to hook up the qbTools environment to your environment. 
-#### 1. hookup qbusmqtt
+#### 1. Hookup qbusmqtt
 Edit & change qbusmqtt service file
 ```
 sudo vi /lib/systemd/system/qbusmqtt.service
@@ -83,7 +81,7 @@ and modify ExecStart parameter
 ```
 mqttbroker "tcp://localhost:11883" -mqttuser qb-mos -mqttpassword qbmos@10
 ```
-#### 1. hookup your existing MQTT broker
+#### 1. Hookup your existing MQTT broker
 Edit mosquitto-qb config file to sync QBUS topics with your exiting MQTT broker
 ```
 vi ~/qbTools/mosquitto/config/mosquitto.conf
@@ -102,7 +100,7 @@ topic cloudapp/# both 0
 ```
 
 
-## Software access
+## Software login
 ### mosquitto
 start a windows 'mqtt explorer' session with following parameters
 ```
