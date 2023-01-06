@@ -17,15 +17,11 @@ dpkg --print-architecture
 ![image](https://user-images.githubusercontent.com/55239601/211047730-63d0f843-c458-417c-804d-be9baaba541f.png)
 
 ## Requirements
-- install qbusmqtt gateway (minimum installation of qbusmqtt and openhab is required) 
- ``` 
+- install qbusmqtt gateway (minimum installation of qbusmqtt and openhab is required)  
 https://github.com/QbusKoen/QbusMqtt-installer
-```
 
 - install docker & docker compose
-```
 https://docs.docker.com/engine/install/
-```
 
 ## Installation
 
@@ -103,40 +99,34 @@ topic cloudapp/# both 0
 ## Software login
 ### mosquitto
 install mqtt explorer software
-%http://mqtt-explorer.com/
+http://mqtt-explorer.com/
 
 start a 'mqtt explorer' session with following parameters
-```
+
 host: your servers ip addres
 port: 11883
 username: qb-mos
 password: qbmos@10
-```
+
 
 ### nodered
-```
 url: http://"your ip address":11880
-```
+
 
 ### homeassistant
-```
 url: http://"your ip address":18123
 username: qb-homeassistant
 password: homeassistant@10
-```
+
 
 ### influxdb
-```
 url: http://"your ip address":18086
 username: qb-influx
 password: qbinflux@10
-```
 
 ### grafana
-```
 url: http://"your ip address":13000
 username: qb-grafana
 password: grafana@10
-```
 
 
