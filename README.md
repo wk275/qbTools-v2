@@ -4,8 +4,8 @@ It creates docker containers for
 - mosquitto (message broker)
 - node-red (handles logic)
 - home-assistant (dashboard)
-- influxDBv1 (database for statistics to be used on sytems with a 32bit OS architecture)
-- influxDBv2 (database statistics to be used on sytems with a 64bit OS architecture)
+- influxDBv1 (database for statistics on sytems with a 32bit OS architecture)
+- influxDBv2 (database statistics on sytems with a 64bit OS architecture)
 - grafana (charts)
 
 The environment is tested and should work on the systems below.
