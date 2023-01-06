@@ -29,7 +29,7 @@ https://github.com/QbusKoen/QbusMqtt-installer
 - install docker & docker compose
 https://docs.docker.com/engine/install/
 
-## Installation
+## qbTools installation
 
 ### Install docker containers
 Preferred installation is in your users home directory. If not you'll need to change some commands below!
