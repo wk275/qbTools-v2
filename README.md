@@ -118,7 +118,6 @@ start a 'mqtt explorer' session with following parameters
 ### nodered
 url: http://"your ip address":11880
 
-
 ### homeassistant
 - url: http://"your ip address":18123
 - username: qb-homeassistant
