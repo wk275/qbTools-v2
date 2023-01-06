@@ -20,7 +20,7 @@ dpkg --print-architecture
 ```
 
 ## System setup
-![image](https://user-images.githubusercontent.com/55239601/211047730-63d0f843-c458-417c-804d-be9baaba541f.png)
+![image](https://user-images.githubusercontent.com/55239601/211054556-c0031049-3810-45f4-880a-5c65923a3120.png)
 
 ## Requirements
 - install qbusmqtt gateway (minimum installation of qbusmqtt and openhab is required)  
