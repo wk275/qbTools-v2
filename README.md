@@ -102,12 +102,42 @@ topic cloudapp/# both 0
 
 ## Software login
 ### mosquitto
-start a windows 'mqtt explorer' session with following parameters
+install mqtt explorer software
 ```
-- Host: your servers ip addres
-- Port: 11883
-- Username: qb-mos
-- password: qbmos@10
+http://mqtt-explorer.com/
+````
+start a 'mqtt explorer' session with following parameters
+```
+host: your servers ip addres
+port: 11883
+username: qb-mos
+password: qbmos@10
+```
+
+### nodered
+```
+url: http://"your ip address":11880
+```
+
+### homeassistant
+```
+url: http://"your ip address":18123
+username: qb-homeassistant
+password: homeassistant@10
+```
+
+### influxdb
+```
+url: http://"your ip address":18086
+username: qb-influx
+password: qbinflux@10
+```
+
+### grafana
+```
+url: http://"your ip address":13000
+username: qb-grafana
+password: grafana@10
 ```
 
 
