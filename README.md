@@ -40,7 +40,7 @@ tar -xzf qbTools_2023-01-06_14-49-29-git.tar.gz
 ```
 
 ### Environment configuration
-Change qbTools directory- and files ownership to the current user and group.
+Change qbTools directory and files ownership to the current user and group.
 configure the correct docker-compose.yaml file according to you OS architecure  
 ```
 cd ~/qbTools
