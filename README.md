@@ -7,6 +7,8 @@ It creates docker containers for
 - influxDBv1 (database for statistics to be used on sytems with a 32bit OS architecture)
 - influxDBv2 (database statistics to be used on sytems with a 64bit OS architecture)
 - grafana (charts)
+# How to check if your system is running in 32 or 64-bit mode
+´´´dpkg --print-architecture´´´
 
 ![image](https://user-images.githubusercontent.com/55239601/211035633-5a07d739-ddfc-4ff8-983e-b8393c389e99.png)
 
