@@ -103,9 +103,8 @@ topic cloudapp/# both 0
 ## Software login
 ### mosquitto
 install mqtt explorer software
-```
-http://mqtt-explorer.com/
-````
+%http://mqtt-explorer.com/
+
 start a 'mqtt explorer' session with following parameters
 ```
 host: your servers ip addres
