@@ -33,7 +33,7 @@ https://docs.docker.com/engine/install/
 ### Install docker containers
 Preferred installation is in your users home directory. If not you'll need to change some commands below!
 
-ssh <your user>@<your ipaddress>
+ssh 'your user'@'your ipaddress'
 ```
 cd ~/
 git clone https://github.com/wk275/qbTools/
