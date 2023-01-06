@@ -31,7 +31,7 @@ https://docs.docker.com/engine/install/
 ## Installation
 
 ### Install docker containers
-Preferred installation is in your users home directory. If not you need to change some commands below!
+Preferred installation is in your users home directory. If not you'll need to change some commands below!
 
 ssh <your user>@<your ipaddress>
 ```
