@@ -9,9 +9,9 @@ It creates docker containers for
 - grafana (charts)
 ### How to check if your system is running in 32 or 64-bit mode
 
-´´´
+```
 dpkg --print-architecture
-´´´
+```
 
 ![image](https://user-images.githubusercontent.com/55239601/211035633-5a07d739-ddfc-4ff8-983e-b8393c389e99.png)
 
