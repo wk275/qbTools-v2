@@ -22,7 +22,7 @@ dpkg --print-architecture
  ``` 
 https://github.com/QbusKoen/QbusMqtt-installer
 ```
-####### Only qbusmqtt and openhab are required. 
+#### Only qbusmqtt and openhab are required. 
 
 - install docker & docker compose
 ```
