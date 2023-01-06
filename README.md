@@ -8,7 +8,7 @@ It creates docker containers for
 - influxDBv2 (database statistics to be used on sytems with a 64bit OS architecture)
 - grafana (charts)
 
-![image](https://user-images.githubusercontent.com/55239601/211032914-ccac6a35-d5d1-4e9c-a411-5cb5ed3247e9.png)
+![image](https://user-images.githubusercontent.com/55239601/211035633-5a07d739-ddfc-4ff8-983e-b8393c389e99.png)
 
 
 ## Requirements
