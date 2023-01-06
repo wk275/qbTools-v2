@@ -18,11 +18,10 @@ dpkg --print-architecture
 
 
 ## Requirements
-- install qbusmqtt gateway
+- install qbusmqtt gateway (minimum installation of qbusmqtt and openhab is required) 
  ``` 
 https://github.com/QbusKoen/QbusMqtt-installer
 ```
-#### Only qbusmqtt and openhab are required. 
 
 - install docker & docker compose
 ```
