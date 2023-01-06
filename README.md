@@ -29,26 +29,25 @@ https://docs.docker.com/engine/install/
 ```
 ## Installation docker containers
 ### ports
-To co-exist with already installed software, I added 10.000 to the standard port numbers.
-E.g  docker container mosquitto-qbus uses port 11883 in stead of 1883
+To co-exist with installed software, I added 10.000 to the standard port numbers.
+E.g  docker container mosquitto-qb uses port 11883 in stead of 1883
 
-### software connections
-To configure all softwares out of the box I used a generic ip address 'local.lan'.
-#### In case you do not run a dns service
-##### edit /etc/hosts and add a line with
-your servers ip addresss followed by local.lan
-E.g. 192.168.2.100 local.lan
+### container links are already defined
+All links between the software containers are configured.
+- nodered-qb is connected to mosquitto-qb and to influxdb-qb
+- homeassistant-qb is connected to mosquitto-qb and to influxdb-qb
+- grafana-qb is connected to influxdb-qb
 
-##### check if local.lan can be accessed
+### external links
+2 ways to hook up the qbTools environment to your environment. 
+#### 1. hookup qbusmqtt 
+Edit & change qbusmqtt service file
 ```
-sudo apt-get install dnsutils
-nslookup local.lan
+/lib/systemd/system/qbusmqtt.service
 ```
-The return shoud read your servers ip address.
-If message ‘** server can't find local.lan: NXDOMAIN’ then you need to install dnsmasq which will dns publish your /etc/hosts entries and will also act as a local dns cache server
+and change 
 ```
-sudo get-apt install dnsmasq
-sudo reboot
+mqttbroker "tcp://localhost:11883" -mqttuser qb-mos -mqttpassword qbmos@10
 ```
 
 ### Install docker containers
