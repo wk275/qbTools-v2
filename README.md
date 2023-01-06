@@ -109,10 +109,10 @@ http://mqtt-explorer.com/
 
 start a 'mqtt explorer' session with following parameters
 
-host: your servers ip addres
-port: 11883
-username: qb-mos
-password: qbmos@10
+- host: your servers ip addres
+- port: 11883
+- username: qb-mos
+- password: qbmos@10
 
 
 ### nodered
@@ -120,19 +120,19 @@ url: http://"your ip address":11880
 
 
 ### homeassistant
-url: http://"your ip address":18123
-username: qb-homeassistant
-password: homeassistant@10
+- url: http://"your ip address":18123
+- username: qb-homeassistant
+- password: homeassistant@10
 
 
 ### influxdb
-url: http://"your ip address":18086
-username: qb-influx
-password: qbinflux@10
+- url: http://"your ip address":18086
+- username: qb-influx
+- password: qbinflux@10
 
 ### grafana
-url: http://"your ip address":13000
-username: qb-grafana
-password: grafana@10
+- url: http://"your ip address":13000
+- username: qb-grafana
+- password: grafana@10
 
 
