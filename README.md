@@ -45,7 +45,7 @@ Edit & change qbusmqtt service file
 ```
 /lib/systemd/system/qbusmqtt.service
 ```
-and change 
+and modify ExecStart parameter
 ```
 mqttbroker "tcp://localhost:11883" -mqttuser qb-mos -mqttpassword qbmos@10
 ```
