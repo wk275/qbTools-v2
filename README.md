@@ -27,10 +27,43 @@ https://github.com/QbusKoen/QbusMqtt-installer
 ```
 https://docs.docker.com/engine/install/
 ```
-## Installation docker containers
-### ports
-To co-exist with installed software, I added 10.000 to the standard port numbers.
-E.g  docker container mosquitto-qb uses port 11883 in stead of 1883
+
+## Installation
+
+### Install docker containers
+Preferred installation is in your users home directory. If not you need to change some commands below!
+
+ssh <your user>@<your ipaddress>
+```
+cd ~/
+git clone https://github.com/wk275/qbTools/
+tar -xzf qbTools_2023-01-06_14-49-29-git.tar.gz
+```
+
+### Environment configuration
+Change qbTools directory- and files ownership to the current user and group.
+configure the correct docker-compose.yaml file according to you OS architecure  
+```
+cd ~/qbTools
+chmod +x setenv.sh
+./setenv.sh
+```
+
+### start docker containers
+```
+cd ~/qbTools
+docker compose up -d
+docker ps -a
+```
+
+### Stop docker containers
+```
+cd ~/qbTools
+docker compose rm --stop --force
+docker ps -a
+```
+5 docker container should run. Please check status.  
+
 
 ### container links are already defined
 All links between the software containers are configured.
@@ -43,16 +76,16 @@ All links between the software containers are configured.
 #### 1. hookup qbusmqtt
 Edit & change qbusmqtt service file
 ```
-/lib/systemd/system/qbusmqtt.service
+sudo vi /lib/systemd/system/qbusmqtt.service
 ```
 and modify ExecStart parameter
 ```
 mqttbroker "tcp://localhost:11883" -mqttuser qb-mos -mqttpassword qbmos@10
 ```
 #### 1. hookup your existing MQTT broker
-Edit mosquitto-qb cnfig file to sync QBUS topics with your exiting MQTT broker
+Edit mosquitto-qb config file to sync QBUS topics with your exiting MQTT broker
 ```
-~/qbTools/mosquitto/config/mosquitto.conf
+vi ~/qbTools/mosquitto/config/mosquitto.conf
 ```
 Add and modify MQTT bride parameters
 ```
@@ -67,23 +100,6 @@ remote_password <MQTT remote password>
 topic cloudapp/# both 0
 ```
 
-### Install docker containers
-ssh user@ipaddress
-git clone https://github.com/wk275/qbTools/
-```
-
-### Start all docker containers
-```
-cd ~/qbTools
-chmod +x docker_up_all.sh
-./docker_up_all.sh
-```
-### Stop all docker containers
-```
-cd ~/qbTools
-chmod +x docker_rm_all.sh
-./docker_rm_all.sh
-```
 
 ## Software access
 ### mosquitto
