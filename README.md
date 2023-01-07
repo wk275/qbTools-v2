@@ -35,12 +35,15 @@ https://docs.docker.com/engine/install/
 Preferred installation is in your user home directory. If not you'll need to change some commands below!
 
 ssh 'your user'@'your ipaddress'
-Install git 
+
+Install git if not already done 
+
 ```
 sudo apt-get install git
 ````
 
 Install qbTools
+
 ```
 cd ~/
 git clone https://github.com/wk275/qbTools/
