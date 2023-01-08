@@ -8,10 +8,21 @@ It creates docker containers for
 - influxDBv2 (database statistics on sytems with a 64bit OS architecture)
 - grafana (charts)
 
-The environment is tested and should work on the systems below.
-- raspberry pi 4B - 4GB memory - 64 bit OS
+The environment is tested and should work on following systems:
+- raspberry pi 4B- 4GB memory - 64 bit OS
+    Raspbian
+    Release:  11
+    Codename: focal
+
 - raspberry pi 4B - 4GB memory - 32 bit OS
+    Raspbian
+    Release:  11
+    Codename: bullseye
+
 - odroid C4 - 4GB memory - 64 bit OS
+    Ubuntu
+    Release: 20.04
+    Codename: focal
 
 #### How to check if your system is running in 32 or 64-bit mode
 
