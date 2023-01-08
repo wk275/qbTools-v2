@@ -114,7 +114,7 @@ topic cloudapp/# both 0
 ```
 
 
-## Software login
+## Software logins
 ### mosquitto
 install mqtt explorer software
 http://mqtt-explorer.com/
@@ -136,7 +136,7 @@ url: http://"your ip address":11880
 - password: qbhomeassistant@10
 
 ### influxdbV1 (on 32 bit OS server)
-influxdb V1 does not have a webbrower interface. You'll need to use the command line !
+influxdb V1 does not have a webbrowser interface. You'll need to use the command line !
 
 ssh 'your user'@'your ipaddress'
 
