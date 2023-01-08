@@ -70,7 +70,7 @@ On some systems there is a - instead of a space between docker and compose.
 For these systems you should use "docker-compose up -d"
 
 If you start qbTools docker containers for the first time all software images will be downloaded. This can take some time.
-Subsequent start will be a lot quicker.
+Subsequent starts will be a lot quicker.
 
 All container names are suffixed by "-qb" . 
 5 docker containers should run. Please check if their status is stable.
