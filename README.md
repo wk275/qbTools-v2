@@ -137,14 +137,15 @@ url: http://"your ip address":11880
 
 ### influxdbV1
 ssh 'your user'@'your ipaddress'
-´´´
+
+```
 docker exec -ti influxdbV1-qb /bin/bash
 influx
 precision rfc3339
 use nodered
 show measurements
 select windgustsKmh,windspeedKmh from buienradar_sensor where time > now()-1h tz('Europe/Brussels')
-´´´
+```
 
 ### influxdbV2
 - url: http://"your ip address":18086
