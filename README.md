@@ -162,5 +162,3 @@ quit
 - url: http://"your ip address":13000
 - username: qb-grafana
 - password: qbgrafana@10
-
-
