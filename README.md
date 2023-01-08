@@ -1,5 +1,5 @@
 # qbTools DO NOT USE. UNDER CONSTRUCTION !! CAN HARM YOUR SYSTEM !!
-This repository installs an integrated tooling environment on linux.
+This repository installs an integrated tooling environment on linux for QBUS or MQTT management.
 It creates docker containers for
 - mosquitto (message broker)
 - node-red (handles logic)
