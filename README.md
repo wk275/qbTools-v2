@@ -85,8 +85,8 @@ All links between the software containers are already configured.
 - grafana-qb is connected to influxdb-qb
 
 ### Define external links
-2 ways to hook up the qbTools environment to your environment. 
-#### 1. Hookup qbusmqtt
+2 ways to connect the qbTools environment to your QBUS environment. 
+#### 1. Connect qbusmqtt
 Edit & change qbusmqtt service file
 ```
 sudo vi /lib/systemd/system/qbusmqtt.service
@@ -95,7 +95,7 @@ and modify ExecStart parameters
 ```
 mqttbroker "tcp://localhost:11883" -mqttuser qb-mos -mqttpassword qbmos@10
 ```
-#### 2. Hookup your existing MQTT broker
+#### 2. Connect an existing remote MQTT broker
 Edit mosquitto-qb config file to sync QBUS topics with your existing MQTT broker
 ```
 vi ~/qbTools/mosquitto/config/mosquitto.conf
