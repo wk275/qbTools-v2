@@ -147,7 +147,10 @@ use nodered
 show measurements
 select windgustsKmh,windspeedKmh from buienradar_sensor where time > now()-1h tz('Europe/Brussels')
 ```
-
+```
+quit
+<ctrl>D
+```
 ### influxdbV2
 - url: http://"your ip address":18086
 - username: qb-influx
