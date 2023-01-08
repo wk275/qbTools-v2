@@ -78,10 +78,10 @@ docker compose rm --stop --force
 docker ps -a
 ```
 
-### Container links are already defined
+### Container links are already activated
 All links between the software containers are already configured.
 - nodered-qb is connected to mosquitto-qb and to influxdb-qb
-- homeassistant-qb is connected to mosquitto-qb and to influxdb-qb
+- homeassistant-qb is connected to mosquitto-qb
 - grafana-qb is connected to influxdb-qb
 
 ### Define external links
