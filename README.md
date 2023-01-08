@@ -68,6 +68,7 @@ docker ps -a
 ```
 On some systems there is a - instead of a space between docker and compose. 
 For these systems you should use "docker-compose up -d"
+
 If you start qbTools docker containers for the first time all software images will be downloaded. This can take some time.
 Subsequent start will be a lot quicker.
 
