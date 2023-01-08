@@ -148,6 +148,7 @@ precision rfc3339
 use nodered
 show measurements
 select windgustsKmh,windspeedKmh from buienradar_sensor where time > now()-1h tz('Europe/Brussels');
+;
 ```
 ```
 quit
