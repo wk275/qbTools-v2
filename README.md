@@ -9,20 +9,9 @@ It creates docker containers for
 - grafana (charts)
 
 The environment is tested and should work on following systems:
-- raspberry pi 4B- 4GB memory - 64 bit OS
-    Raspbian
-    Release:  11
-    Codename: focal
-
-- raspberry pi 4B - 4GB memory - 32 bit OS
-    Raspbian
-    Release:  11
-    Codename: bullseye
-
-- odroid C4 - 4GB memory - 64 bit OS
-    Ubuntu
-    Release: 20.04
-    Codename: focal
+- raspberry pi 4B- 4GB memory - 64 bit OS - Raspbian - Release: 11 - Codename: focal
+- raspberry pi 4B - 4GB memory - 32 bit OS - Raspbian - Release:  11 - Codename: bullseye
+- odroid C4 - 4GB memory - 64 bit OS - Ubuntu - Release: 20.04 - Codename: focal
 
 #### How to check if your system is running in 32 or 64-bit mode
 
@@ -31,7 +20,7 @@ dpkg --print-architecture
 ```
 
 ## System setup
-![image](https://user-images.githubusercontent.com/55239601/211189938-3fecb434-f777-44d9-9416-48bd472d68e2.png)
+![image](https://user-images.githubusercontent.com/55239601/211190262-26ec2a4c-faa6-4a46-adf0-859ccb79e49e.png)
 
 ## Requirements
 - for QBUS installations, install qbusmqtt gateway (minimum installation of qbusmqtt and openhab is required)  
