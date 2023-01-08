@@ -139,8 +139,9 @@ url: http://"your ip address":11880
 ssh 'your user'@'your ipaddress'
 
 ```
-docker exec -ti influxdbV1-qb /bin/bash
-influx
+docker exec -ti influx
+```
+```
 precision rfc3339
 use nodered
 show measurements
