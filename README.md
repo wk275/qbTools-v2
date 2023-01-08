@@ -149,7 +149,6 @@ select windgustsKmh,windspeedKmh from buienradar_sensor where time > now()-1h tz
 ```
 ```
 quit
-<ctrl>D
 ```
 ### influxdbV2
 - url: http://"your ip address":18086
