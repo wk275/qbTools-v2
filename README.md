@@ -112,7 +112,9 @@ remote_username <MQTT remote user name>
 remote_password <MQTT remote password>
 topic cloudapp/# both 0
 ```
-
+```
+docker restart mosquitto-qb
+```
 
 ## Software logins
 ### mosquitto
