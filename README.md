@@ -74,6 +74,9 @@ Subsequent starts will be a lot quicker.
 
 All container names are suffixed by "-qb" . 
 5 docker containers should run. Please check if their status is stable.
+```
+docker ps -a
+```
 
 ### Stop docker containers
 ```
