@@ -136,7 +136,7 @@ url: http://"your ip address":11880
 - password: qbhomeassistant@10
 
 ### influxdbV1 (on 32 bit OS server)
-influxdb V1 does not have a webbrowser interface. You'll need to use the command line !
+influxdb V1 does not have a webbrowser interface. Use the command line !
 
 ssh 'your user'@'your ipaddress'
 
