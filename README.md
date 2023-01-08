@@ -135,7 +135,9 @@ url: http://"your ip address":11880
 - username: qb-homeassistant
 - password: qbhomeassistant@10
 
-### influxdbV1
+### influxdbV1 (on 32 bit OS server)
+influxdb V1 does not have a webbrower interface. You'll need to use the command line !
+
 ssh 'your user'@'your ipaddress'
 
 ```
@@ -150,7 +152,7 @@ select windgustsKmh,windspeedKmh from buienradar_sensor where time > now()-1h tz
 ```
 quit
 ```
-### influxdbV2
+### influxdbV2 (on 64 bit OS server)
 - url: http://"your ip address":18086
 - username: qb-influx
 - password: qbinflux@10
