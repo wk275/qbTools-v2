@@ -9,7 +9,7 @@ It creates docker containers for
 - grafana (charts)
 
 The environment is tested and should work on following systems:
-- raspberry pi 4B- 4GB memory - 64 bit OS - Raspbian - Release: 11 - Codename: focal
+- raspberry pi 4B- 4GB memory - 64 bit OS - Debian - Release: 11 - Codename: bullseye
 - raspberry pi 4B - 4GB memory - 32 bit OS - Raspbian - Release:  11 - Codename: bullseye
 - odroid C4 - 4GB memory - 64 bit OS - Ubuntu - Release: 20.04 - Codename: focal
 
