@@ -12,7 +12,7 @@ The environment is tested and should work on following systems:
 - raspberry pi 4B- 4GB memory - 64 bit OS - Debian - Release: 11 - Codename: bullseye
 - raspberry pi 4B - 4GB memory - 32 bit OS - Raspbian - Release:  11 - Codename: bullseye
 - odroid C4 - 4GB memory - 64 bit OS - Ubuntu - Release: 20.04 - Codename: focal
-- laptop - 64 bit AMD - Ubuntu - Release: 22.04 - Codename: jammy
+- AMD 64 bit - Ubuntu - Release: 22.04 - Codename: jammy
 
 #### How to check if your system is running in 32 or 64-bit mode
 
