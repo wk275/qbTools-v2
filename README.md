@@ -66,8 +66,12 @@ cd ~/qbTools
 docker compose up -d
 docker ps -a
 ```
-On some systems there is a - instead of a space between docker and compose. 
-For these systems you should use "docker-compose up -d"
+I noticed that on some systems there is a dash instead of a space between docker and compose.
+Seams that "docker-compose is V1 and "docker compose" is V2.
+For more information and how to resolve this see
+```
+https://stackoverflow.com/questions/66514436/difference-between-docker-compose-and-docker-compose
+```
 
 If you start qbTools docker containers for the first time all software images will be downloaded. This can take some time.
 Subsequent starts will be a lot quicker.
