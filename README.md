@@ -176,3 +176,14 @@ quit
 - url: http://"your ip address":13000
 - username: qb-grafana
 - password: qbgrafana@10
+
+
+## Cleanup and delete the qbTools environment
+
+```
+cd ~/qbTools
+docker compose rm --stop --force
+docker system prune -a
+cd ..
+sudo rm -rf ./qbTools
+```
