@@ -122,7 +122,7 @@ try_private false
 cleansession true
 remote_username <MQTT remote user name>
 remote_password <MQTT remote password>
-topic cloudapp/# both 0
+topic cloudapp/# in 0
 ```
 ```
 docker restart mosquitto-qb
