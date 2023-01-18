@@ -113,7 +113,8 @@ Edit mosquitto-qb config file to sync QBUS topics with your existing MQTT broker
 vi ~/qbTools/mosquitto/config/mosquitto.conf
 ```
 Add
-_type all
+# bridge connection
+log_type all
 connection bridge-01
 address <remote MQTT ip address and port e.g. 192.168.2.190:1883>
 try_private false
@@ -122,6 +123,7 @@ remote_username <MQTT remote user name>
 remote_password <MQTT remote password>
 topic cloudapp/QBUSMQTTGW/config in 2
 topic cloudapp/QBUSMQTTGW/UL1/# both 2
+
 ```
 docker restart mosquitto-qb
 ```
