@@ -123,7 +123,6 @@ remote_password <MQTT remote password>
 topic cloudapp/QBUSMQTTGW/config in 2
 topic cloudapp/QBUSMQTTGW/UL1/# both 2
 ```
-```
 docker restart mosquitto-qb
 ```
 
@@ -161,7 +160,6 @@ precision rfc3339
 use nodered
 show measurements
 select windgustsKmh,windspeedKmh from buienradar_sensor where time > now()-1h tz('Europe/Brussels');
-;
 ```
 ```
 quit
