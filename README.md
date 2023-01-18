@@ -103,7 +103,7 @@ sudo vi /lib/systemd/system/qbusmqtt.service
 ```
 and modify ExecStart parameters
 ```
-mqttbroker "tcp://your MQTT broker ip address:11883 -mqttuser qb-mos -mqttpassword qbmos@10
+mqttbroker tcp://your MQTT broker ip address:11883 -mqttuser qb-mos -mqttpassword qbmos@10
 ```
 Restart mqtt.service
 ```
