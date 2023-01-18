@@ -48,7 +48,7 @@ Install qbTools
 ```
 cd ~/
 git clone https://github.com/wk275/qbTools/
-tar -xzf ./qbTools/qbTools_2023-01-08_17-09-08-git.tar.gz
+tar -xzf ./qbTools/qbTools_2023-01-18_16-56-37-git.tar.gz
 ```
 
 ### Environment configuration
