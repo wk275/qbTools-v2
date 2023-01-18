@@ -90,44 +90,24 @@ docker compose rm --stop --force
 docker ps -a
 ```
 
-### Container links are already activated
+### Container links are already activated.
 All links between the software containers are already configured.
 - nodered-qb is connected to mosquitto-qb and to influxdb-qb
 - homeassistant-qb is connected to mosquitto-qb
 - grafana-qb is connected to influxdb-qb
 
-### Define external links
-2 ways to connect the qbTools environment to your QBUS environment. 
-#### 1. Connect qbusmqtt
+### Connect the qbTools environment to QbusMqtt. 
 Edit & change qbusmqtt service file
 ```
 sudo vi /lib/systemd/system/qbusmqtt.service
 ```
 and modify ExecStart parameters
 ```
-mqttbroker "tcp://localhost:11883" -mqttuser qb-mos -mqttpassword qbmos@10
+mqttbroker "tcp://your MQTT broker ip address:11883 -mqttuser qb-mos -mqttpassword qbmos@10
 ```
-#### 2. Connect an existing remote MQTT broker
-Edit mosquitto-qb config file to sync QBUS topics with your existing MQTT broker
+Restart mqtt.service
 ```
-vi ~/qbTools/mosquitto/config/mosquitto.conf
-```
-Add
-```
-# bridge connection
-log_type all
-connection bridge-01
-address <remote MQTT ip address and port e.g. 192.168.2.190:1883>
-try_private false
-cleansession true
-remote_username <MQTT remote user name>
-remote_password <MQTT remote password>
-topic cloudapp/QBUSMQTTGW/config in 2
-topic cloudapp/QBUSMQTTGW/UL1/# both 2
-```
-
-```
-docker restart mosquitto-qb
+sudo systemctl restart qbusmqtt.service
 ```
 
 ## Software logins
