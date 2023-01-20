@@ -101,7 +101,7 @@ Edit & change qbusmqtt service file
 ```
 sudo vi /lib/systemd/system/qbusmqtt.service
 ```
-and modify ExecStart parameters
+and modify ExecStart parameters mqttbroker, mqttuser and mqttpassword
 ```
 mqttbroker tcp://your MQTT broker ip address:11883 -mqttuser qb-mos -mqttpassword qbmos@10
 ```
