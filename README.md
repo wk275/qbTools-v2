@@ -1,4 +1,4 @@
-# qbTools (update qbTools_2023-08-07_19-48-15) 
+# qbTools V2.2.2
 This repository installs an integrated tooling environment on linux for QBUS or MQTT.
 It creates docker containers for
 - mosquitto (message broker)
