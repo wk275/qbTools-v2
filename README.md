@@ -45,7 +45,7 @@ sudo apt-get install git
 ```
 cd ~/
 git clone https://github.com/wk275/qbTools-v2/
-tar -xzf ~/qbTools/qbTools_2023-08-10_21-49-12-git.tar.gz 
+tar -xzf ~/qbTools-v2/qbTools_2023-08-10_21-49-12-git.tar.gz 
 ```
 
 ### Environment configuration
@@ -55,14 +55,14 @@ tar -xzf ~/qbTools/qbTools_2023-08-10_21-49-12-git.tar.gz
 - setup openhab for your qbus controller
 
 ```
-cd ~/qbTools
+cd ~/qbTools-v2
 chmod +x setenv.sh
 ./setenv.sh
 ```
 
 ### Start qbTools-v2 docker containers
 ```
-cd ~/qbTools
+cd ~/qbTools-v2
 docker compose up -d
 docker ps -a
 ```
@@ -85,7 +85,7 @@ docker ps -a
 
 ### Stop docker containers
 ```
-cd ~/qbTools
+cd ~/qbTools-v2
 docker compose rm --stop --force
 docker ps -a
 ```
@@ -154,34 +154,34 @@ quit
 ## Cleanup and delete the qbTools environment
 
 ```
-cd ~/qbTools
+cd ~/qbTools-v2
 docker compose rm --stop --force
 docker system prune -a
 ## this will delete all docker images, networks and volumes. Not only the qbtool-v2 ones! Images, networks, etc will be restored after restarting your containers
 cd ..
-sudo rm -rf ./qbTools
+sudo rm -rf ./qbTools-v2
 ```
 
 ## Backup the qbTools-v2 environment
 
-Simply copy the qbTools directory to a different name.
+Simply copy the qbTools-v2 directory to a different name.
 
 ```
-sudo cp -pr ~/qbTools ~/qbTools_backup
+sudo cp -pr ~/qbTools-v2 ~/qbTools-v2_backup
 ```
 
 ## Running a 2nd qbTools environment
 - stop your containers
-- copy the qbTools directory 
+- copy the qbTools-v2 directory 
 - cd to that new directory and start the new containers
 
 !!!!! it is advised to run only 1 qbTools environment at the same time !!!!!
 
 ```
-cd ~/qbTools
+cd ~/qbTools-v2
 docker compose rm --stop --force
-sudo cp -pr ~/qbTools ~/qbTools_copy
-cd ~/qbTools_copy
+sudo cp -pr ~/qbTools-v2 ~/qbTools-v2_copy
+cd ~/qbTools-v2_copy
 docker compose up -d
 docker ps -a
 ```
