@@ -68,7 +68,7 @@ docker ps -a
 ```
 I noticed that on some systems there is a dash instead of a space between docker and compose.
 Seams that "docker-compose is V1 and "docker compose" is V2.
-For more information and how to resolve this see
+For more information on how to resolve this see
 
 https://stackoverflow.com/questions/66514436/difference-between-docker-compose-and-docker-compose
 
@@ -156,7 +156,8 @@ quit
 ```
 cd ~/qbTools
 docker compose rm --stop --force
-docker system prune -a      ## this will delete all docker images, networks and volumes. Not only the qbtool-v2 ones! Images, networks, etc will be setup again after restarting your containers
+docker system prune -a
+## this will delete all docker images, networks and volumes. Not only the qbtool-v2 ones! Images, networks, etc will be restored after restarting your containers
 cd ..
 sudo rm -rf ./qbTools
 ```
@@ -174,7 +175,7 @@ sudo cp -pr ~/qbTools ~/qbTools_backup
 - copy the qbTools directory 
 - cd to that new directory and start the new containers
 
-!!!!! it is advised to run only 1 qbTools environment at a time!
+!!!!! it is advised to run only 1 qbTools environment at the same time !!!!!
 
 ```
 cd ~/qbTools
