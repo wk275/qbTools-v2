@@ -7,21 +7,19 @@ It creates docker containers for
 - influxDBv1 (database on 32bit OS architecture systems)
 - influxDBv2 (database on 64bit OS architecture systems)
 - grafana (charts)
+- openhab
+- qbusmqtt
 
-The environment is tested and should work on following systems:
-- raspberry pi 4B- 4GB memory - 64 bit OS - Debian - Release: 11 - Codename: bullseye
-- raspberry pi 4B - 4GB memory - 32 bit OS - Raspbian - Release:  11 - Codename: bullseye
-- odroid C4 - 4GB memory - 64 bit OS - Ubuntu - Release: 20.04 - Codename: focal
-- AMD 64 bit - Ubuntu - Release: 22.04 - Codename: jammy
+The environment is tested on following systems:
+- raspberry pi 4B- 4GB memory - 64 bit OS - Debian GNU/Linux 11 (bullseye)
 
-#### How to check if your system is running in 32 or 64-bit mode
-
+#### Check if your OS is running in 64-bit mode
 ```
 dpkg --print-architecture
 ```
 
 ## System setup
-![image](https://user-images.githubusercontent.com/55239601/211190465-80a58146-2370-4d8b-b43c-d3ea5bd02be9.png)
+![image](https://github.com/wk275/qbTools-V2/assets/55239601/58ca6963-8ef7-4707-b7f2-ca3c5918d7ea)
 
 ## Requirements
 - for QBUS installations, install qbusmqtt gateway (minimum installation of qbusmqtt and openhab is required)  
