@@ -40,12 +40,12 @@ I20230810 17:28:05.461040    16 MqttRouter.cpp:157] MQTT broker connected
 I20230810 17:28:05.661568    15 MqttRouter.cpp:1509] Sending Online to MQTT: {"id":"QBUSMQTTGW","online":true,"reason":"Connected @2023-08-10-17:28:05"}
 I20230810 17:28:05.661788    15 ConfigManager.cpp:117] Cloud connected
 I20230810 17:28:08.453084    21 FileStorage.cpp:534] Saving controller info to file: /opt/qbus/qbushw.json
-I20230810 17:28:08.462980    21 QbusMain.cpp:540] Creating controller, id: 1,  serial: 002156
+I20230810 17:28:08.462980    21 QbusMain.cpp:540] Creating controller, id: 1,  serial: xxxxx
 I20230810 17:28:08.463218    10 ConfigManager.cpp:947] Store private config to file: /ubieroot/configbackup/UbieLite_2023-08-10-17-28.json
 I20230810 17:28:08.473495    22 ActiveController.cpp:286] [UL1] Currently offline
 I20230810 17:29:05.851095    16 ConfigManager.cpp:213] Request a HCB Config from: UbieLite
 I20230810 17:29:06.931212    20 ActiveController.cpp:845] [UL1] Activation received from the cloud,  Auth key: ubielite
-I20230810 17:29:06.973498    21 ActivateCtd.cpp:92] Activation UbieLite, current Authentication key: aeecf4973b8e416db1d2dfd8f
+I20230810 17:29:06.973498    21 ActivateCtd.cpp:92] Activation UbieLite, current Authentication key: xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 I20230810 17:29:06.974416    21 FileStorage.cpp:534] Saving controller info to file: /opt/qbus/qbushw.json
 I20230810 17:29:06.982344    10 ConfigManager.cpp:947] Store private config to file: /ubieroot/configbackup/UbieLite_2023-08-10-17-29.json
 I20230810 17:29:06.997195    22 ActiveController.cpp:600] [UL1] Controller Xport Version: 6.1.3, Wanted version: 6.1.3
@@ -58,7 +58,7 @@ W20230810 17:29:12.067018    21 ActiveController.cpp:670] [UL1] Socket closed, S
 I20230810 17:29:30.839895    21 ActiveController.cpp:286] [UL1] Currently offline
 I20230810 17:29:49.613227    22 ActiveController.cpp:600] [UL1] Controller Xport Version: 6.1.3, Wanted version: 6.1.3
 I20230810 17:29:49.613720    22 ActiveController.cpp:603] [UL1] Xport version on controller is equal, or larger than min required. No update needed
-I20230810 17:29:49.634900    22 ControllerSocket.cpp:473] [UL1] Hostname resolved, connecting with: 192.168.20.205:8446
+I20230810 17:29:49.634900    22 ControllerSocket.cpp:473] [UL1] Hostname resolved, connecting with: xx.xx.xx.xx:8446
 I20230810 17:29:49.636126    21 ControllerSocket.cpp:490] [UL1] Controller connected
 I20230810 17:29:49.657178    22 ActiveController.cpp:712] [UL1] Activation controller successfull
 I20230810 17:29:49.657523    22 FileStorage.cpp:534] Saving controller info to file: /opt/qbus/qbushw.json
