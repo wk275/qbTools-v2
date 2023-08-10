@@ -1,4 +1,4 @@
-# qbTools-v2
+# qbTools-v2 (!! does not support a 32-bit OS yet. Will be probably available soon !!)
 This repository installs a tooling environment for qbus and mqtt.
 Following softwares are installed in docker containers.
 - mosquitto (message broker)
