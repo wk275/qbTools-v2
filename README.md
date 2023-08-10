@@ -45,7 +45,7 @@ sudo apt-get install git
 ```
 cd ~/
 git clone https://github.com/wk275/qbTools-v2/
-tar -xzf ~/qbTools/qbTools_2023-08-07_19-48-15-git.tar.gz 
+tar -xzf ~/qbTools/qbTools_2023-08-10_21-49-12-git.tar.gz 
 ```
 
 ### Environment configuration
