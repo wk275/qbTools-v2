@@ -21,7 +21,8 @@ dpkg --print-architecture
 ```
 
 ## System setup
-![image](https://github.com/wk275/qbTools-V2/assets/55239601/58ca6963-8ef7-4707-b7f2-ca3c5918d7ea)
+![image](https://github.com/wk275/qbTools-v2/assets/55239601/a46bd943-dacf-4aab-bcc4-3537014e213d)
+
 
 ## Requirements
 - install docker & docker compose
