@@ -1,4 +1,7 @@
-# qbTools-v2 (!! does not support a 32-bit OS yet.)
+# qbTools-v2 (nodered codebase = 2.2.2) 
+
+(!! does not support a 32-bit OS yet.)
+
 This repository installs a tooling environment for qbus and mqtt.
 Following softwares are installed in docker containers.
 - mosquitto (message broker)
@@ -13,7 +16,7 @@ Following softwares are installed in docker containers.
 The environment is tested on following systems:
 - raspberry pi 4B- 4GB memory - 64 bit OS - Debian GNU/Linux 11 (bullseye)
 
-!! qbtools-v2 does not support a 32-bit OS yet. Will be probably available soon !!
+!! qbtools-v2 does not support a 32-bit OS yet.
 
 #### Check if your OS is running in 64-bit mode
 ```
