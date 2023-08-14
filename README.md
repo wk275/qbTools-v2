@@ -1,23 +1,25 @@
-# qbTools-v2 (nodered codebase = 2.2.2) 
+# qbTools-v2 (nodered codebase = 2.2.3) 
+!! qbTools-v2 does not support a 32-bit OS anymore.
 
-(!! does not support a 32-bit OS yet for the full software stack.)
+## Release notes codebase 2.2.3
+- Nodered StackHero module does not support InfluxV1 anymore. Removed OS 32-bit configuration and influxdb V1
+- Setup nodered theme solarized light
+- Setup Home assistant theme solarized light, favicons
+- Update Qbus entity states when Home assistant is restarted
 
+## Introduction
 This repository installs a tooling environment for qbus and mqtt.
 Following softwares are installed in docker containers.
 - mosquitto (message broker)
 - node-red (logic processing & creation of Home assistant entities)
 - home-assistant (dashboard)
-- influxDBv1 (database on 32bit OS architecture systems)
 - influxDBv2 (database on 64bit OS architecture systems)  to store qbus and mqtt statistics
 - grafana (charts)
 - openhab (qbusmqtt requirement and dashboard)
 - qbusmqtt (gateway between qbus and mqtt broker
 
-The environment is tested on following systems:
+The environment is tested on following system:
 - raspberry pi 4B- 4GB memory - 64 bit OS - Debian GNU/Linux 11 (bullseye)
-
-!! qbtools-v2 does not support a 32-bit OS yet for the full software stack. 
-If installed on a 32-bit system, openhab and qbusmqqt containers are excluded. !!
 
 #### Check if your OS is running in 64-bit mode
 ```
@@ -50,7 +52,7 @@ sudo apt-get install git
 ```
 cd ~/
 git clone https://github.com/wk275/qbTools-v2/
-tar -xzf ./qbTools-v2/qbTools_2023-08-10_22-15-25-git.tar.gz 
+tar -xzf ./qbTools-v2/qbTools_2023-08-14_21-45-57-git.tar.gz
 ```
 
 ### Environment configuration
@@ -124,24 +126,7 @@ url: http://"your ip address":11880
 - username: qb-homeassistant
 - password: qbhomeassistant@10
 
-### influxdbV1 (on 32 bit OS server)
-influxdb V1 does not have a webbrowser interface. Use the command line !
-
-ssh 'your user'@'your ipaddress'
-
-```
-docker exec -ti influxdbV1-qb influx
-```
-```
-precision rfc3339
-use nodered
-show measurements
-select windgustsKmh,windspeedKmh from buienradar_sensor where time > now()-1h tz('Europe/Brussels');
-```
-```
-quit
-```
-### influxdbV2 (on 64 bit OS server)
+### influxdbV2
 - url: http://"your ip address":18086
 - username: qb-influx
 - password: qbinflux@10
