@@ -1,11 +1,4 @@
 # qbTools-v2 (nodered codebase = 2.3.12) 
-!! qbTools-v2 does not support a 32-bit OS anymore.
-
-- Nodered StackHero module does not support InfluxV1 anymore. Removed OS 32-bit configuration and influxdb V1
-- Setup nodered theme solarized light
-- Setup Home assistant theme solarized light, favicons
-- Update Qbus entity states when Home assistant is restarted
-
 ## Introduction
 This repository installs a tooling environment for qbus and mqtt.
 Following softwares are installed in docker containers.
@@ -14,7 +7,6 @@ Following softwares are installed in docker containers.
 - home-assistant (dashboard)
 - influxDBv2 (database on 64bit OS architecture systems)  to store qbus and mqtt statistics
 - grafana (charts)
-- openhab (qbusmqtt requirement and dashboard)
 - qbusmqtt (gateway between qbus and mqtt broker
 
 The environment is tested on following system:
@@ -51,18 +43,18 @@ sudo apt-get install git
 ```
 cd ~/
 git clone https://github.com/wk275/qbTools-v2/
-tar -xzf ./qbTools-v2/qbTools_2023-08-14_21-45-57-git.tar.gz
+tar -xzf ./qbTools-v2/qbTools_2023-09-03_16-20-35-git.tar.gz
 ```
 
 ### Environment configuration
 
-- change qbTools directory and file ownership to your user and group id.
 - configure the correct yaml files according to you OS architecure
-- setup openhab for your qbus controller
+- setup qbus serial number
+- setup port prefix
+- setup container suffix 
 
 ```
 cd ~/qbTools-v2
-chmod +x setenv.sh
 ./setenv.sh
 ```
 
@@ -82,9 +74,9 @@ If you start qbTools docker containers for the first time all software images wi
 This can take some time.
 Subsequent starts will be a lot quicker.
 
-All container names are suffixed by "-qb" 
+All container names are suffixed by your container suffix 
 
-7 docker containers should run. Please check if their status is stable.
+Please check if they are stable.
 ```
 docker ps -a
 ```
@@ -112,65 +104,71 @@ http://mqtt-explorer.com/
 start a 'mqtt explorer' session with following parameters
 
 - host: your servers ip addres
-- port: 11883
+- port: x1883
 - username: qb-mos
 - password: qbmos@10
 
 
 ### nodered
-url: http://"your ip address":11880
+url: http://"your ip address":x1880
 
 ### homeassistant
-- url: http://"your ip address":18123
+- url: http://"your ip address":x8123
 - username: qb-homeassistant
 - password: qbhomeassistant@10
 
 ### influxdbV2
-- url: http://"your ip address":18086
+- url: http://"your ip address":x8086
 - username: qb-influx
 - password: qbinflux@10
 
 ### grafana
-- url: http://"your ip address":13000
+- url: http://"your ip address":x3000
 - username: qb-grafana
 - password: qbgrafana@10
 
-### openhab
-- url: http://"your ip address":18080
-- username: qb-openhab
-- password: qbopenhab@10
-
 ## Cleanup and delete the qbTools environment
-
 ```
 cd ~/qbTools-v2
 docker compose rm --stop --force
 docker system prune -a
-## this will delete all docker images, networks and volumes. Not only the qbtool-v2 ones! Images, networks, etc will be restored after restarting your containers
+## this will delete all docker images, networks and volumes. Not only the qbtool-v2 ones!
+## Images, networks, etc will be restored after restarting your containers
 cd ..
 sudo rm -rf ./qbTools-v2
 ```
 
 ## Backup the qbTools-v2 environment
-
 Simply copy the qbTools-v2 directory to a different name.
-
 ```
-sudo cp -pr ~/qbTools-v2 ~/qbTools-v2_backup
+cd ~/
+for container in `docker ps -a | awk -F' ' '{ print $NF }'|grep -v NAMES`; do
+  docker pause $container
+done
+
+cp -pr ~/qbTools-v2 ~/qbTools-v2_backup
+
+for container in `docker ps -a | awk -F' ' '{ print $NF }'|grep -v NAMES`; do
+  docker unpause $container
+done
 ```
 
 ## Running a 2nd qbTools environment
 - stop your containers
 - copy the qbTools-v2 directory 
-- cd to that new directory and start the new containers
-
-!!!!! it is advised to run only 1 qbTools environment at the same time !!!!!
-
+- cd to that new directory
+- execute setenv.sh to change get a new port prefix and a new container name e.g. serial number: xxx , port prefix: 5, container suffix: -copy
 ```
-cd ~/qbTools-v2
-docker compose rm --stop --force
-sudo cp -pr ~/qbTools-v2 ~/qbTools-v2_copy
-cd ~/qbTools-v2_copy
+cd ~/
+for container in `docker ps -a | awk -F' ' '{ print $NF }'|grep -v NAMES`; do
+  docker pause $container
+done
+cp -pr ./qbTools-v2 ./qbTools-V2_copy
+for container in `docker ps -a | awk -F' ' '{ print $NF }'|grep -v NAMES`; do
+  docker unpause $container
+done
+cd ./qbTools-V2_copy
+./setenv.sh
 docker compose up -d
 docker ps -a
 ```
