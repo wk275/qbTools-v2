@@ -167,6 +167,7 @@ cp -pr ./qbTools-v2 ./qbTools-V2_copy
 for container in `docker ps -a | awk -F' ' '{ print $NF }'|grep -v NAMES`; do
   docker unpause $container
 done
+
 cd ./qbTools-V2_copy
 ./setenv.sh
 docker compose up -d
