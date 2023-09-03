@@ -1,4 +1,4 @@
-# qbTools-v2 (nodered codebase = 2.3.12) 
+# qbTools-v2 (v2.3.12) 
 ## Introduction
 This repository installs a tooling environment for qbus and mqtt.
 Following softwares are installed in docker containers.
