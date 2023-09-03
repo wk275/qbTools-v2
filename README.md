@@ -1,7 +1,6 @@
-# qbTools-v2 (nodered codebase = 2.2.3) 
+# qbTools-v2 (nodered codebase = 2.3.12) 
 !! qbTools-v2 does not support a 32-bit OS anymore.
 
-## Release notes codebase 2.2.3
 - Nodered StackHero module does not support InfluxV1 anymore. Removed OS 32-bit configuration and influxdb V1
 - Setup nodered theme solarized light
 - Setup Home assistant theme solarized light, favicons
