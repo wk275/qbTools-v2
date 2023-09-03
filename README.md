@@ -157,7 +157,7 @@ done
 - stop your containers
 - copy the qbTools-v2 directory 
 - cd to that new directory
-- execute setenv.sh to change get a new port prefix and a new container name e.g. serial number: xxx , port prefix: 5, container suffix: -copy
+- execute setenv.sh to get a new port prefix and a new container name e.g. serial number: xxxxxx , port prefix: 5, container suffix: -copy
 ```
 cd ~/
 for container in `docker ps -a | awk -F' ' '{ print $NF }'|grep -v NAMES`; do
