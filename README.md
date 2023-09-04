@@ -93,7 +93,6 @@ All links between the software containers are already configured.
 - nodered-qb is connected to mosquitto-qb and to influxdb-qb
 - homeassistant-qb is connected to mosquitto-qb
 - grafana-qb is connected to influxdb-qb
-- openhab is connected to the qbusmqtt and mqtt bridges
 - qbusmqtt is configured to use mosquitto 
 
 ## Software logins
