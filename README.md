@@ -18,7 +18,7 @@ dpkg --print-architecture
 ```
 
 ## System setup
-![image](https://github.com/wk275/qbTools-v2/assets/55239601/a46bd943-dacf-4aab-bcc4-3537014e213d)
+![image](https://github.com/wk275/qbTools-v2/assets/55239601/6e9f2563-7457-4377-afbe-8e602fb8d55c)
 
 
 ## Requirements
