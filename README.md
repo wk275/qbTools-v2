@@ -9,8 +9,10 @@ Following softwares are installed in docker containers.
 - grafana (charts)
 - qbusmqtt (gateway between qbus and mqtt broker
 
-The environment is tested on following system:
-- raspberry pi 4B- 4GB memory - 64 bit OS - Debian GNU/Linux 11 (bullseye)
+The environment is tested on following systems:
+- arm64 - raspberry pi 4B- 4GB memory - 64 bit OS - Debian GNU/Linux 11 (bullseye)
+- arm64 - odroid C4 4-GB memory - 64 bit OS - Ubuntu 22.04.3 LTS (jammy)
+- amd64 - X64 64 bit OS - Ubuntu 22.04.3 LTS (jammy)
 
 #### Check if your OS is running in 64-bit mode
 ```
