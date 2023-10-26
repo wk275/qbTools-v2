@@ -1,0 +1,31 @@
+    2.5.1   qbTools     Scripts                 #D2511 Defect: setenv.sh when no serial number entered. sed instructions executed against non existing files. 
+            docker      qbusmqtt                #E2512 Enhancement: set correct timezone
+            docker      qbusmqtt                #D2513 Defect: docker problem with qbusmqtt-xx - docker image port is not rebuild when port changes for the 2nd+ time. 
+                                                    Removed hardcoded statements in qbusmqtt build. Implemented environment variables in Dockerfile and docker-compose_qbusmqtt.yaml
+                                                        - IP=127.0.0.1
+                                                        - PORT=11883
+                                                        - USER=qb-mos
+                                                        - PASSWORD=qbmos@10
+                                                        - TZ=Europe/Brussels
+            scripts	setenv.sh               #D2513 Reflect changes in setenv.sh
+            influx      Scripts                 #E2514 Enhancement: Script Influx_data-migration.sh for data migration Influxdb buckets. For details execute ./Influx_data-migration.sh -h in qbToools dir
+    2.5.2   class       Ha                      #E2521 Complete REDESIGN of Ha class. Implement entity and class parameters (required - optional - defaults). HAparms parameter structure is used for:
+                                                    - ha entity parameter checking
+                                                    - ha entity creation
+            class       Ha                      #E2521 Implement pre- and post-processing HA entities to dynamically change entity properties based on name or unique_id regular expression
+            node        HAparms                 #E2521 Apply changes wrt redesign HA class
+            node        HA                      #E2521 Apply changes wrt redesign HA class
+            node        Qbus HA                 #E2521 Apply changes wrt redesign HA class
+
+            !!!!                                #E2521 Many thanks to Asulonn for testing the solution and for the idea and discussions about adding extra parameters and binaray_sensor implementation.
+
+    2.5.3   class       Ha                      #D2531 Defect in I_createHaEntityParms: Overwrite of default optional device parameters is not correct 
+    2.5.6   class       Ha                      #E2541 @redirect in msg.parms and node.parms + slice logic
+                                                #E2541 E.g. 
+                                                    {
+                                                        "entity_type: "sensor",
+                                                        "topic": "shellies/shellyplug2/relay",
+                                                        "name": "test.[@topic#slice(/,_,1,3)] [@entity_type]"
+                                                             ==> "name":  "test.shellyplug2_relay sensor"
+                                                    }
+    2.5.7   class       Ha                      #D2571 defect in I_resolveRedirects for nested redirects+slice. Change logic to always execute slice logic, not only when returned from iteration
