@@ -48,6 +48,112 @@ git clone https://github.com/wk275/qbTools-v2/
 tar -xzf ./qbTools-v2/qbTools_2023-10-26_14-01-39-git.tar.gz
 ```
 
+### Change Dockerfile-64bit_amd64 file
+```
+cd ~/qbTools-v2
+```
+
+```
+FROM ubuntu:latest
+
+ARG GW2USE=x64
+ARG TZ="Europe/Brussels"
+
+ENV IP=""
+ENV PORT=""
+ENV MQTT_USER=""
+ENV MQTT_PASSWORD=""
+ENV UID=1000
+ENV GID=1000
+
+RUN apt-get update -y \
+    && apt-get install -y tftp \
+    && apt-get install -y git \
+    && apt-get install -y unzip \
+    && git clone https://github.com/QbusKoen/qbusMqtt \
+    && cd /qbusMqtt/qbusMqtt/qbusMqttGw \
+    && tar -xf "qbusMqttGw-${GW2USE}.tar" \
+    && cd / \
+    && mkdir /usr/bin/qbus \
+    && mkdir /opt/qbus \
+    && mkdir /log \
+    && chmod 777 /usr/bin/qbus \
+    && chmod 777 /opt/qbus \
+    && chmod 777 /log \
+    && cp -R qbusMqtt/qbusMqtt/fw/ /opt/qbus/ \
+    && cp qbusMqtt/qbusMqtt/puttftp /opt/qbus/ \
+    && cp qbusMqtt/qbusMqtt/qbusMqttGw/qbusMqttGw /usr/bin/qbus/ \
+    && chmod +x /usr/bin/qbus/qbusMqttGw \
+    && chmod +x /opt/qbus/puttftp
+
+RUN apt-get update && \
+    apt-get install -yq tzdata && \
+    ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
+
+USER ${UID}:${GID}
+
+CMD /usr/bin/qbus/./qbusMqttGw -serial="QBUSMQTTGW" -logbuflevel -1 -logtostderr true -storagedir /opt/qbus -mqttbroker "tcp://${IP}:${PORT}" -mqttuser ${MQTT_USER} -mqttpassword ${MQTT_PASSWORD} > /log/qbusmqtt.log 2>&1
+
+```
+
+### Change Dockerfile-64bit_arm64 file also
+```
+cd ~/qbTools-v2
+```
+
+```
+FROM ubuntu:latest
+
+ARG GW2USE=arm
+ARG TZ="Europe/Brussels"
+
+ENV IP=""
+ENV PORT=""
+ENV MQTT_USER=""
+ENV MQTT_PASSWORD=""
+ENV UID=1000
+ENV GID=1000
+
+RUN dpkg --add-architecture armhf \
+    &&  apt-get update -y \
+    && apt-get install libc6:armhf -y \
+    && apt-get install libdbus-1-3:armhf -y \
+    && apt-get install libstdc++6:armhf -y \
+    && apt-get install libcrypt1:armhf -y
+
+RUN apt-get update -y \
+    && apt-get install -y tftp-hpa \
+    && apt-get install -y git \
+    && apt-get install -y unzip \
+    && git clone https://github.com/QbusKoen/qbusMqtt \
+    && cd /qbusMqtt/qbusMqtt/qbusMqttGw \
+    && tar -xf "qbusMqttGw-${GW2USE}.tar" \
+    && cd / \
+    && mkdir /usr/bin/qbus \
+    && mkdir /opt/qbus \
+    && mkdir /log \
+    && chmod 777 /usr/bin/qbus \
+    && chmod 777 /opt/qbus \
+    && chmod 777 /log \
+    && cp -R qbusMqtt/qbusMqtt/fw/ /opt/qbus/ \
+    && cp qbusMqtt/qbusMqtt/puttftp /opt/qbus/ \
+    && cp qbusMqtt/qbusMqtt/qbusMqttGw/qbusMqttGw /usr/bin/qbus/ \
+    && chmod +x /usr/bin/qbus/qbusMqttGw \
+    && chmod +x /opt/qbus/puttftp
+
+RUN apt-get update && \
+    apt-get install -yq tzdata && \
+    ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
+
+USER ${UID}:${GID}
+
+CMD /usr/bin/qbus/./qbusMqttGw -serial="QBUSMQTTGW" -logbuflevel -1 -logtostderr true -storagedir /opt/qbus -mqttbroker "tcp://${IP}:${PORT}" -mqttuser ${MQTT_USER} -mqttpassword ${MQTT_PASSWORD} > /log/qbusmqtt.log 2>&1
+
+
+```
+
 ### Environment configuration
 
 - configure the correct yaml files according to you OS architecure
